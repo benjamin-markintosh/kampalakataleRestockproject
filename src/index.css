@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --yellowgold: #f7d454;
+  --white: #faf0e6;
+  --orange: #ff7a00;
+  --black: #000;
+}
+
+body {
+  background-color: var(--yellowgold);
+}
+
+.menu li {
+  padding-right: 2rem;
+  text-align: center;
+}
