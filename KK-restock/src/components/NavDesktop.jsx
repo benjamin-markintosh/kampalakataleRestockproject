@@ -1,4 +1,5 @@
 import React from "react";
+import { Link }
 
 function NavDesktop() {
   return (
@@ -9,23 +10,13 @@ function NavDesktop() {
         </div>
         <div className="menu text-kkwhite ">
           <ul className="flex flex-row flex-wrap p-3">
-            <a href="">
-              <li>Home</li>
-            </a>
-            <a href="">
-              <li>Home</li>
-            </a>
-            <a href="">
-              <li>Home</li>
-            </a>
-            <a href="">
-              <li>Home</li>
-            </a>
+            <NavLinks/>
           </ul>
         </div>
       </div>
     </div>
   );
 }
+import NavLinks from "./NavLinks";
 
 export default NavDesktop;
