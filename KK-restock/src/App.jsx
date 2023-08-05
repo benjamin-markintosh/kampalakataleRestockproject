@@ -1,11 +1,11 @@
 //import "./App.css";
-import Landing from "./components/Landing";
+import NavAdmin from "./components/NavAdmin";
 
 function App() {
   return (
-    <>
-      <Landing />
-    </>
+    <div className="AppWindow flex bg-white">
+      <NavAdmin />
+    </div>
   );
 }
 
