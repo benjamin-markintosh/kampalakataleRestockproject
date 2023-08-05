@@ -30,15 +30,7 @@ function NavAdmin() {
         }`}
         onClick={() => setOpen(!open)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="#FF7A00"
-        >
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
-          <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z" />
-        </svg>
+        <img src="./src/assets/images/arrow.svg" />
       </div>
       <div className="flex gap-x-4 items-center">
         <img
@@ -74,11 +66,13 @@ function NavAdmin() {
         ))}
       </ul>
       <p
-        className={`text-kkwhite text-sm items-center align-text-center absolute bottom-4 ${
+        className={`text-kkwhite text-xs  items-center align-text-center absolute bottom-4 ${
           !open && "hidden"
         } duration-200 `}
       >
-        Powered by Fortis Team 2023
+        Powered by Fortis Team 2023 <br /> Copyright &copy;{" "}
+        <script>document.write(new Date().getFullYear())</script> Fortis Team
+        International All Rights Reserved
       </p>
     </div>
   );
