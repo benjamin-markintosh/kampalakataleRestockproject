@@ -1,11 +1,16 @@
-//import "./App.css";
-import Landing from "./components/Landing";
+
+import NavLinks from "./components/NavLinks";
+
+
 
 function App() {
   return (
-    <>
-      <Landing />
-    </>
+
+    <div>
+      <NavLinks/>
+    
+    </div>
+   
   );
 }
 
