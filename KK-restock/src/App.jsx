@@ -1,10 +1,13 @@
 //import "./App.css";
-import NavAdmin from "./components/NavAdmin";
+// import NavAdmin from "./components/NavAdmin";
+
+import { Card } from "@mantine/core";
+import NavLinks from "./components/NavLinks";
 
 function App() {
   return (
-    <div className="AppWindow flex bg-white">
-      <NavAdmin />
+    <div>
+      <NavLinks/>
     </div>
   )
   }
