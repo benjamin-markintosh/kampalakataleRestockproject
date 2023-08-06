@@ -13,36 +13,36 @@ import RootLayout from "./routes/RootLayout";
 
 
 
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage/>,
-    children: [
-      {
-        path: "/services",
-        element: <Services />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-    ]
-  },
+// const appRouter = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <RootLayout />,
+//     errorElement: <ErrorPage/>,
+//     children: [
+//       {
+//         path: "/services",
+//         element: <Services />,
+//       },
+//       {
+//         path: "/about",
+//         element: <About />,
+//       },
+//       {
+//         path: "/contact",
+//         element: <Contact />,
+//       },
+//     ]
+//   },
   
   
-]);
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={appRouter} />
-);
+// ]);
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
+//   <RouterProvider router={appRouter} />
 // );
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
