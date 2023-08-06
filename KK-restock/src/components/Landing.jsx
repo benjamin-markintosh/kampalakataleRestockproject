@@ -1,10 +1,10 @@
-import NavDesktop from "./NavDesktop";
+
 
 function Landing() {
   return (
     <>
       <NavDesktop />
-      <div className="body-section">
+      <div className="body-section flex flex-row">
         <div className="ryt"></div>
         <div className="lft">
           <div className="content">
