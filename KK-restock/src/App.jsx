@@ -6,7 +6,6 @@ function App() {
     <div className="AppWindow flex bg-white">
       <NavAdmin />
     </div>
-  );
-}
-
+  )
+  }
 export default App;
