@@ -1,4 +1,4 @@
-import NavDesktop from "./NavDesktop";
+
 
 function Landing() {
   return (
