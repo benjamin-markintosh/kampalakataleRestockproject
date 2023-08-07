@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import About from "./components/About";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import {createBrowserRouter, RouterProvider,} from "react-router-dom";
+// import About from "./components/About";
+// import Services from "./components/Services";
+// import Contact from "./components/Contact";
+// import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
-import ErrorPage from "./components/ErrorPage";
-import RootLayout from "./routes/RootLayout";
+// import ErrorPage from "./components/ErrorPage";
+// import RootLayout from "./routes/RootLayout";
 
 
 

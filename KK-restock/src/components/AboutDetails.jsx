@@ -1,6 +1,8 @@
+import Team from '../components/Team'
+
 function AboutDetails() {
   return (
-    <div>
+    <div className='border-box'>
       <div className="pt-12 text-center  bg-slate-600">
         <h1 className="text-2xl text-kkwhite font-bold">About Us </h1>
         <p className="p-2 text-yellow-100">
@@ -14,6 +16,9 @@ function AboutDetails() {
           the convenience of your mobiles, as well as find suppliers from all
           over the country.
         </p>
+      </div>
+      <div className='mt-16'>
+        <Team/>
       </div>
     </div>
   );
