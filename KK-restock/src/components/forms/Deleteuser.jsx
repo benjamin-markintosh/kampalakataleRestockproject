@@ -1,34 +1,46 @@
-//import React from "react";
-
-import DragAndDrop from "../DragAndDrop";
-import "./AddUser.css";
-
-function Adduser() {
+function Deleteuser() {
+  const profileInfo = {
+    Firstname: "Mugumya",
+    Lastname: "Benjamin",
+    Email: "benjaminokiza@gmail.com",
+    Tel: "0770840163",
+    Address: "Ntinda-Kampala",
+    Tin: "099090939N",
+    WorkTel: "0770840163",
+    BusinessAddress: "Kampala",
+    BusinessDesc:
+      "We Deal in Importation and Exportation of Tech Appliances straight fro certified and Authorised Manufacturers",
+  };
   return (
-    // container for the forms
     <div className=" w-3/4 justify-center items-center ">
-      <form className=" w-auto   items-center  px-10 py-8 lg:px-32">
-        <div className="w-full  flex justify-center">
-          <DragAndDrop />
+      <div className="w-full  flex justify-center pt-8">
+        <div className="profilepic w-32 h-32 justify-center flex bg-red-200/20">
+          <h2 className="text-center font-bold text-kkblack/50 flex items-center">
+            Profile Photo
+          </h2>
         </div>
+      </div>
+      <form className=" w-auto   items-center  px-10 pb-8 pt-2 lg:px-32">
         <h1 className=" text-center font-bold  px-4 py-4">Edit Profile</h1>
         <div className="names flex justify-between gap-4 py-2">
           <label className="label" htmlFor="Firstname">
             Firstname
           </label>
           <input
+            value={profileInfo.Firstname}
             type="text"
             name="Firstname"
-            className="inputText"
+            className="inputTextInactive "
             id="Firstname"
           />
           <label className="label" htmlFor="Lastname">
             Lastname
           </label>
           <input
+            value={profileInfo.Lastname}
             type="text"
             name="Lastname"
-            className="inputText"
+            className="inputTextInactive"
             id="Lastname"
           />
         </div>
@@ -36,20 +48,33 @@ function Adduser() {
           <label className="label" htmlFor="Email">
             Email
           </label>
-          <input type="text" name="Email" className="inputText" id="Email" />
+          <input
+            value={profileInfo.Email}
+            type="text"
+            name="Email"
+            className="inputTextInactive"
+            id="Email"
+          />
           <label className="label" htmlFor="Tel">
             Tel
           </label>
-          <input type="text" name="Tel" className="inputText" id="Tel" />
+          <input
+            value={profileInfo.Tel}
+            type="text"
+            name="Tel"
+            className="inputTextInactive"
+            id="Tel"
+          />
         </div>
         <div className="busiiness flex justify-between gap-4 py-2">
           <label className="label" htmlFor="Address">
             Address
           </label>
           <input
+            value={profileInfo.Address}
             type="text"
             name="Address"
-            className="inputText"
+            className="inputTextInactive"
             id="Address"
           />
         </div>
@@ -62,14 +87,21 @@ function Adduser() {
           <label className="label" htmlFor="Tin">
             Tin
           </label>
-          <input type="text" name="Tin" className="inputText" id="Tin" />
+          <input
+            value={profileInfo.Tin}
+            type="text"
+            name="Tin"
+            className="inputTextInactive"
+            id="Tin"
+          />
           <label className="label" htmlFor="WorkTel">
             Work Tel
           </label>
           <input
+            value={profileInfo.WorkTel}
             type="text"
             name="WorkTel"
-            className="inputText"
+            className="inputTextInactive"
             id="WorkTel"
           />
         </div>
@@ -78,9 +110,10 @@ function Adduser() {
             Business Address
           </label>
           <input
+            value={profileInfo.BusinessAddress}
             type="text"
             name="BusinessAddress"
-            className="inputText"
+            className="inputTextInactive"
             id="BusinessAddress"
           />
         </div>
@@ -89,16 +122,17 @@ function Adduser() {
             Business Description
           </label>
           <textarea
+            value={profileInfo.BusinessDesc}
             type="text"
             name="BusinessDesc"
-            className="flex-1 rounded-lg bg-kkwhite h-16 -rounded-full bg-kkwhite cursor-text border-none ring-2 ring-kkyellow focus:ring-2 focus:ring-kkorange duration-200"
+            className="flex-1 rounded-lg text-kkblack/50  border-none ring-2 ring-kkblack/25 cursor-not-allowed"
             id="BusinessDesc"
             rows="2"
           ></textarea>
         </div>
         <div className="button flex justify-center pt-2">
-          <button className="bg-kkyellow text-kkblack font-bold border border-kkblack shadow-md hover:bg-kkorange hover:text-kkwhite duration-300 cursor-pointer w-64 py-2 px-4 rounded-full">
-            Submit
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full w-64">
+            Delete Profile
           </button>
         </div>
       </form>
@@ -106,4 +140,4 @@ function Adduser() {
   );
 }
 
-export default Adduser;
+export default Deleteuser;

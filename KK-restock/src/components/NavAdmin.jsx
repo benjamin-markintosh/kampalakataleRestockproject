@@ -11,6 +11,7 @@ function NavAdmin() {
     { title: "Orders", src: "orders" },
     { title: "Transactions", src: "transactions" },
     { title: "Inventory", src: "inventory" },
+    { title: "Branches", src: "branches" },
     { title: "Add Products", src: "addProduct" },
     { title: "Edit Products", src: "editProduct" },
     { title: "Delete Products", src: "deleteProduct" },
@@ -23,7 +24,7 @@ function NavAdmin() {
     <div
       className={`navbarAdmin ${
         open ? "w-72" : "w-20"
-      }  duration-300  left-0 bg-kkblack pt-6 relative px-4 `}
+      }  duration-300  left-0 bg-kkblack pt-6  relative px-4 `}
     >
       <div
         className={`svg absolute cursor-pointer rounded-full -right-3 top-9 w-7 bg-white ${
@@ -67,7 +68,7 @@ function NavAdmin() {
         ))}
       </ul>
       <p
-        className={`footertext text-kkwhite text-xs  items-center align-text-center absolute bottom-4 ${
+        className={`footertext text-kkwhite text-xs pb-4 px-2 items-center align-text-center absolute fixed bottom-0 left-0 w-auto ${
           !open && "hidden"
         } duration-200 `}
       >

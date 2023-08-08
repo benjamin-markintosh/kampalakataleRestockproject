@@ -1,8 +1,6 @@
 //import "./App.css";
 
-import EditProfile from "./routes/EditProfile";
-
 function App() {
-  return <EditProfile />;
+  return <>Hello World</>;
 }
 export default App;
