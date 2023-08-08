@@ -4,20 +4,35 @@
 
 :root {
   --yellowgold: #f7d454;
+  --kkyellow: #f7d655;
   --white: #faf0e6;
   --orange: #ff7a00;
   --black: #000;
 }
 
+@layer base {
+  .inputText {
+    @apply flex-1 rounded-full bg-kkwhite cursor-text border-none ring-2 ring-kkyellow focus:ring-2 focus:ring-kkorange duration-200;
+  }
+  .inputTextInactive {
+    @apply flex-1 rounded-full text-kkblack/50  border-none ring-2 ring-kkblack/25 cursor-not-allowed;
+  }
+  form div {
+    @apply flex-col md:flex-row  duration-300;
+  }
+  .label {
+    @apply md:w-20;
+  }
+}
+
 body {
-  background-color: var(--yellowgold);
+  background-color: white;
 }
 
 .menu li {
   padding-right: 2rem;
   text-align: center;
 }
-
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

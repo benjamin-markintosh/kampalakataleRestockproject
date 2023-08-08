@@ -20,6 +20,7 @@
     "@mantine/notifications": "^6.0.17",
     "@mantine/nprogress": "^6.0.17",
     "@tabler/icons-react": "^2.30.0",
+    "@tailwindcss/forms": "^0.5.4",
     "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
