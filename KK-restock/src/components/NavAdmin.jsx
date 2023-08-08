@@ -1,6 +1,7 @@
 //import React from "react";
 
 import { useState } from "react";
+import "./NavAdmin.css";
 
 function NavAdmin() {
   const [open, setOpen] = useState(true);
@@ -20,9 +21,9 @@ function NavAdmin() {
 
   return (
     <div
-      className={`${
+      className={`navbarAdmin ${
         open ? "w-72" : "w-20"
-      }  duration-300 h-screen bg-kkblack pt-6 relative pl-4`}
+      }  duration-300  left-0 bg-kkblack pt-6 relative px-4 `}
     >
       <div
         className={`svg absolute cursor-pointer rounded-full -right-3 top-9 w-7 bg-white ${
@@ -66,7 +67,7 @@ function NavAdmin() {
         ))}
       </ul>
       <p
-        className={`text-kkwhite text-xs  items-center align-text-center absolute bottom-4 ${
+        className={`footertext text-kkwhite text-xs  items-center align-text-center absolute bottom-4 ${
           !open && "hidden"
         } duration-200 `}
       >

@@ -1,0 +1,14 @@
+@media (max-device-height: 750px) {
+  .footertext {
+    display: none;
+  }
+  .navbarAdmin {
+    width: 20px;
+  }
+}
+
+@media (max-device-width: 400px) {
+  .navbarAdmin {
+    width: 20px;
+  }
+}

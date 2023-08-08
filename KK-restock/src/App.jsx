@@ -1,10 +1,8 @@
 //import "./App.css";
 
+import EditProfile from "./routes/EditProfile";
+
 function App() {
-  return (
-    <div>
-      <NavLinks />
-    </div>
-  );
+  return <EditProfile />;
 }
 export default App;
