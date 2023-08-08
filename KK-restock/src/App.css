@@ -62,7 +62,59 @@
     cursor: pointer;
     width: 100%;
   }
+
+/* MAIN CSS */
+
+.main-text{
+  max-width: 650px;
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+
+}
+
+.main-text .para{
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.main-text .para2{
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+}
+.main-text h1 span{
+  color: teal;
+}
+
+.main-text .btn{
+  text-decoration: none;
+  background-color: #FF7A00;
+  padding: 8px 25px;
+  color: #fff;
+  margin-top: 40px;
+  border-radius: 35px;
   
+}
+
+.main-text .btn:hover{
+  transition: all .6s ease;
+  background: transparent;
+  border: 1px solid #FF7A00;
+}
+/* FOOTER */
+
+.container{
+  position: relative;
+  min-height: 100vh;
+}
+  .footer{
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;
+  }
 
 @keyframes logo-spin {
   from {
