@@ -1,144 +1,71 @@
-import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
 
+ function Footer() {
+  return (
+    <div>
+      <footer className="">
+        <div className='p-5 bg-gray-800 text-kkwhite'>
+          <div className='max-w-5xl mx-auto h-25'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
+              <div className='mb-5'>
+                <h4 className='text-2xl pb-4'>Company</h4>
+                <p className='text-gray-500'>
+                  A1245 kampala Road <br/>
+                  Kakajjo house, PB 2454254 <br/>
+                  Uganda <br/>
+                  <strong>Phone:</strong>+256 772 601 3256 <br/>
+                  <strong>Email:</strong>+info@example.com <br/>
+                </p>
+              </div>
 
+              <div className='mb-5'>
+                <h4 className='pb-4'>About Kampala Katale Uganda</h4>
+                <ul className='text-gray-500'>
+                  <li className='pb-2 hover:text-kkyellow'><a href='#'></a>Home</li>
+                  <li className='pb-2 hover:text-kkyellow'><a href='#'></a>Kampala Katale Careers</li>
+                  <li className='pb-2 hover:text-kkyellow'><a href='#'></a>About</li>
+                  <li className='pb-2 hover:text-kkyellow'><a href='#'></a>Terms of services</li>
+                  <li className='pb-2 hover:text-kkyellow'><a href='#'></a>Privacy policy</li>
+                </ul>
+              </div>
 
-const useStyles = createStyles((theme) => ({
-    footer: {
-      marginTop: rem(120),
-      paddingTop: `calc(${theme.spacing.xl} * 2)`,
-      paddingBottom: `calc(${theme.spacing.xl} * 2)`,
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-      borderTop: `${rem(1)} solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
-      }`,
-    },
-  
-    logo: {
-      maxWidth: rem(200),
-  
-      [theme.fn.smallerThan('sm')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      },
-    },
-  
-    description: {
-      marginTop: rem(5),
-  
-      [theme.fn.smallerThan('sm')]: {
-        marginTop: theme.spacing.xs,
-        textAlign: 'center',
-      },
-    },
-  
-    inner: {
-      display: 'flex',
-      justifyContent: 'space-between',
-  
-      [theme.fn.smallerThan('sm')]: {
-        flexDirection: 'column',
-        alignItems: 'center',
-      },
-    },
-  
-    groups: {
-      display: 'flex',
-      flexWrap: 'wrap',
-  
-      [theme.fn.smallerThan('sm')]: {
-        display: 'none',
-      },
-    },
-  
-    wrapper: {
-      width: rem(160),
-    },
-  
-    link: {
-      display: 'block',
-      color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
-      fontSize: theme.fontSizes.sm,
-      paddingTop: rem(3),
-      paddingBottom: rem(3),
-  
-      '&:hover': {
-        textDecoration: 'underline',
-      },
-    },
-  
-    title: {
-      fontSize: theme.fontSizes.lg,
-      fontWeight: 700,
-      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-      marginBottom: `calc(${theme.spacing.xs} / 2)`,
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    },
-  
-    afterFooter: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginTop: theme.spacing.xl,
-      paddingTop: theme.spacing.xl,
-      paddingBottom: theme.spacing.xl,
-      borderTop: `${rem(1)} solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-      }`,
-  
-      [theme.fn.smallerThan('sm')]: {
-        flexDirection: 'column',
-      },
-    },
-  
-    social: {
-      [theme.fn.smallerThan('sm')]: {
-        marginTop: theme.spacing.xs,
-      },
-    },
-  }));
-  
-//   interface FooterLinksProps {
-//     data: {
-//       title: string;
-//       links: { label: string; link: string }[];
-//     }[];
-//   }
-  
-  export function Footer({ data }: FooterLinksProps) {
-    const { classes } = useStyles();
-  
-   
-    return (
-      <footer className={classes.footer}>
-        <Container className={classes.inner}>
-          <div className={classes.logo}>
-            <MantineLogo size={30} />
-            <Text size="xs" color="dimmed" className={classes.description}>
-              Build fully functional accessible web applications faster than ever
-            </Text>
+              <div className='mb-5'>
+                <h4 className='pb-4'>Useful Links</h4>
+                <ul className='text-gray-500'>
+                  <li className='pb-2 hover:text-kkyellow'>How to buy on Kampala Katale</li>
+                  <li className='pb-2 hover:text-kkyellow'>Payment Methods</li>
+                  <li className='pb-2 hover:text-kkyellow'>Delivery</li>
+                  <li className='pb-2 hover:text-kkyellow'>Delivery Timelines</li>
+                  <li className='pb-2 hover:text-kkyellow'>Report a Product</li>
+                  <li className='pb-2 hover:text-kkyellow'>Return Process</li>
+                  <li className='pb-2 hover:text-kkyellow'>Jumia Payment Information Guidelines</li>
+                </ul>
+              </div>
+
+              <div className='mb-5'>
+                <h4 className='pb-2'>Join our Newsletter</h4>
+                <p className='text-gray-500 pb-2'>join 23,000+ others and never miss out on new tips, tutorials, and more</p>
+                <form className='flex flex-row flex-wrap'>
+                  <input type="text" className='text-gray-500 w-2/3 p-2 focus:border-kkyellow'placeholder='email@example.com'/>
+                  <button className='p-2 w-1/3 bg-kkyellow hover:bg-yellow-600'>Subscribe</button>
+                </form>
+              </div>
+            </div>
           </div>
-          <div className={classes.groups}>{groups}</div>
-        </Container>
-        <Container className={classes.afterFooter}>
-          <Text color="dimmed" size="sm">
-            © 2020 mantine.dev. All rights reserved.
-          </Text>
-  
-          <Group spacing={0} className={classes.social} position="right" noWrap>
-            <ActionIcon size="lg">
-              <IconBrandTwitter size="1.05rem" stroke={1.5} />
-            </ActionIcon>
-            <ActionIcon size="lg">
-              <IconBrandYoutube size="1.05rem" stroke={1.5} />
-            </ActionIcon>
-            <ActionIcon size="lg">
-              <IconBrandInstagram size="1.05rem" stroke={1.5} />
-            </ActionIcon>
-          </Group>
-        </Container>
+        </div>
+        <div className='w-full bg-gray-900 text-gray-500 px-10'>
+          <div>
+            <div className='text-center'>
+                <div>
+                  Copyright <strong><span>Kampala Katale</span></strong>. All Rights Reserved
+                </div>
+                <div>
+                  Designed by <a href='' className='text-yellow-500'>Fortis</a>
+                </div>
+            </div>
+          </div>
+        </div>
       </footer>
-    );
-  }
+    </div>
+  )
+}
+export default Footer;

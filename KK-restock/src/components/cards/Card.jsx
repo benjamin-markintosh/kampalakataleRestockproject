@@ -1,48 +1,17 @@
+
 function Card() {
   return (
     <div>
-      <div className="row">
-        <div className="column">
-          <div className="card">
-            <img src="/w3images/team1.jpg" alt="Jane" style="width: 100%" />
-            <div className="container">
-              <h2>Jane Doe</h2>
-              <p className="title">CEO & Founder</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>jane@example.com</p>
-              <p>
-                <button className="button">Contact</button>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="column">
-          <div className="card">
-            <img src="/w3images/team2.jpg" alt="Mike" style="width: 100%" />
-            <div className="container">
-              <h2>Mike Ross</h2>
-              <p className="title">Art Director</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>mike@example.com</p>
-              <p>
-                <button className="button">Contact</button>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="column">
-          <div className="card">
-            <img src="/w3images/team3.jpg" alt="John" style="width: 100%" />
-            <div className="container">
-              <h2>John Doe</h2>
-              <p className="title">Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
-              <p>
-                <button className="button">Contact</button>
-              </p>
+      <div className=" float-left mb-12 bg-kkwhite rounded-md shadow-md">
+        <div className="my-2">
+          <img src="../../assets/images/Kampalakatale Logo-02.png"></img>
+          <div className="px-0-4 text-center text-xs p-3">
+            <h2> Kamu Marvin</h2>
+            <p className="text-black ">Founder</p>
+            <p>Some text that describes me</p>
+            <p>jane@example.com</p>
+            <div className="w-full inline-block border-none outline-none rounded-sm  bg-kkorange  text-sm p-1 mt-4 w-100">
+            <button className="">Contact</button>
             </div>
           </div>
         </div>
