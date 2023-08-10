@@ -1,6 +1,12 @@
 //import "./App.css";
 
+import ClientLanding from "./routes/ClientLanding";
+
 function App() {
-  return <>Hello World</>;
+  return (
+    <>
+      <ClientLanding />
+    </>
+  );
 }
 export default App;
