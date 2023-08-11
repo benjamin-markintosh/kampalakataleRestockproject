@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
   return (
     <div>
       
-      <Outlet/>
+      <Outlet />
     </div>
   )
 }

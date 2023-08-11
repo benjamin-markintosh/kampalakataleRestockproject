@@ -1,14 +1,17 @@
-//import "./App.css";
-// import NavAdmin from "./components/NavAdmin";
 
-import { Card } from "@mantine/core";
-import NavLinks from "./components/NavLinks";
+//import "./App.css";
+
+
+
+
+
+
+
+
 
 function App() {
-  return (
-    <div>
-      <NavLinks/>
-    </div>
-  )
-  }
+  return <></>;
+
+}
+
 export default App;

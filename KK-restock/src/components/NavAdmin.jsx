@@ -1,6 +1,7 @@
 //import React from "react";
 
 import { useState } from "react";
+import "./NavAdmin.css";
 
 function NavAdmin() {
   const [open, setOpen] = useState(true);
@@ -10,6 +11,7 @@ function NavAdmin() {
     { title: "Orders", src: "orders" },
     { title: "Transactions", src: "transactions" },
     { title: "Inventory", src: "inventory" },
+    { title: "Branches", src: "branches" },
     { title: "Add Products", src: "addProduct" },
     { title: "Edit Products", src: "editProduct" },
     { title: "Delete Products", src: "deleteProduct" },
@@ -20,9 +22,9 @@ function NavAdmin() {
 
   return (
     <div
-      className={`${
+      className={`navbarAdmin ${
         open ? "w-72" : "w-20"
-      }  duration-300 h-screen bg-kkblack pt-6 relative pl-4`}
+      }  duration-300  left-0 bg-kkblack pt-6  relative px-4 `}
     >
       <div
         className={`svg absolute cursor-pointer rounded-full -right-3 top-9 w-7 bg-white ${
@@ -30,15 +32,7 @@ function NavAdmin() {
         }`}
         onClick={() => setOpen(!open)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="#FF7A00"
-        >
-          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
-          <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z" />
-        </svg>
+        <img src="./src/assets/images/arrow.svg" />
       </div>
       <div className="flex gap-x-4 items-center">
         <img
@@ -74,11 +68,13 @@ function NavAdmin() {
         ))}
       </ul>
       <p
-        className={`text-kkwhite text-sm items-center align-text-center absolute bottom-4 ${
+        className={`footertext text-kkwhite text-xs pb-4 px-2 items-center align-text-center absolute fixed bottom-0 left-0 w-auto ${
           !open && "hidden"
         } duration-200 `}
       >
-        Powered by Fortis Team 2023
+        Powered by Fortis Team 2023 <br /> Copyright &copy;{" "}
+        <script>document.write(new Date().getFullYear())</script> Fortis Team
+        International All Rights Reserved
       </p>
     </div>
   );
