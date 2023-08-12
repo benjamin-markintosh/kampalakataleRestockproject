@@ -1,7 +1,8 @@
+
 function LogoBlack() {
   return (
     <div>
-      <div className="flex gap-x-2 md:gap-x-4  items-center">
+      <div className="inline-flex gap-x-2 md:gap-x-4  items-center absolute ">
         <img
           src="./src/assets/images/KampalakataleLogo-01.png"
           className={`cursor-pointer duration-500 w-10 sm:w-14`}
@@ -12,6 +13,7 @@ function LogoBlack() {
         >
           <span className="text-kkblack ">Kampala </span>Katale
         </div>
+        
       </div>
     </div>
   );

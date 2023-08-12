@@ -19,27 +19,33 @@ const productImage = [
   {
     id: "3",
     alt: "image ",
-    src: image3,
+    src: image2,
   },
 ];
 
 const renderSlides = productImage.map((image) => (
   <div key={image.id}>
-    <img src={image.src} alt={image.alt} className="h-[98] w-[100px]" />
+    <img src={image.src} alt={image.alt}  />
     
   </div>
 ));
 
-function Product() {
+function ProductCarousel() {
   const [currentIndex, setCurrentIndex] = useState();
   function handleChange(index) {
     setCurrentIndex(index);
   }
 
   return (
-    <div className="flex m-auto p-10 mt-10  w-[352px] h-[250px] ">
+    <div className=" ml-10  ">
+      <div>
+        <h2 className="font-semibold">Add to cart</h2>
+        <h5 className="font-light text-sm">HOME/MASTERMUTWE HARDWARE/CEMENT</h5>
+      </div>
+
+      {/* w-[799.35px] h-[710px] */}
       <Carousel
-        className="max-w-lg  w-lg h-[96]"
+        className=" z-10  "
         showArrows={true}
         autoPlay={true}
         infiniteLoop={true}
@@ -51,4 +57,5 @@ function Product() {
     </div>
   );
 }
-export default Product;
+export default ProductCarousel;
+
