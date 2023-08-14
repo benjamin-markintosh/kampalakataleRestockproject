@@ -116,6 +116,34 @@
     height: 2.5rem;
   }
 
+  /* TABLE CSS */
+  .table1{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  table{
+    width: 800px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 15px;
+    background: #F7D655;
+    border-radius: 5px;
+  }
+  tr{
+    text-align: center;
+  }
+  th{
+    font-size: 15px;
+   padding: 7px;
+    border-bottom: 1px solid black;
+  }
+
+  td{
+    font-size: 11px;
+    text-align: center;
+  }
   
 
 @keyframes logo-spin {

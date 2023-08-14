@@ -1,4 +1,3 @@
-
 import ProductTypeSelect from "./selects/ProductTypeSelect";
 import ShoppingCartNav from "./ShoppingCartNav";
 
@@ -9,7 +8,9 @@ function ProductTitleDetails(props) {
         <h1 className=" ml-[510px] text-black text-[25px] mb-0  font-bold">
           CEMENT
         </h1>
-        <div className="mt-5 mr-5"><ShoppingCartNav /></div>
+        <div className="mt-5 mr-5">
+          <ShoppingCartNav />
+        </div>
       </div>
 
       <div className="flex justify-center gap-1">
