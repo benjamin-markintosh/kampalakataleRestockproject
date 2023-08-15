@@ -1,16 +1,14 @@
 
 //import "./App.css";
 
-
-
-
-
-
+import MyChart from "./routes/MyChart";
 
 
 
 function App() {
-  return <></>;
+  return <>
+    < MyChart />
+  </>;
 
 }
 
