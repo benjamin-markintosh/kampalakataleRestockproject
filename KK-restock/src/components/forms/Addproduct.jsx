@@ -11,51 +11,51 @@ function AddProduct(props) {
   };
 
   return (
-    <div className="ml-10 box-border h-85 w-80">
+    <div className="ml-10  ">
       <h1 className="py-5 text-xl font-extrabold ">Hima Cement</h1>
 
       <form className="">
         <div className="py-1 ">
           <div className="flex gap-1  py-1">
-            <label htmlFor="country" className="font-bold">
+            <label htmlFor="country" className="font-bold text-[12px]">
               Packaging
             </label>
             <select
-              className=""
+              className="  text-[10px]"
               value={delivery}
               onChange={(e) => {
                 setPackaging(e.target.value);
               }}
             >
-              <option>Paper Bag</option>
+              <option >Paper Bag</option>
               <option></option>
               <option></option>
             </select>
           </div>
 
           <div className="flex gap-4 py-1 ">
-            <label htmlFor="quantity" className="font-bold">
+            <label htmlFor="quantity" className="font-bold text-[12px]">
               Quantity
             </label>
             <select
-              className="classic"
+            className="  text-[10px]"
               value={delivery}
               onChange={(e) => {
                 setQuantity(e.target.value);
               }}
             >
               <option>100</option>
-              <option>No external background image</option>
-              <option>No wrapper</option>
+              <option>200</option>
+              <option>300</option>
             </select>
           </div>
 
           <div className="flex gap-4 py-1 ">
-            <label htmlFor="delivery" className="font-bold">
+            <label htmlFor="delivery" className="font-bold text-[12px]">
               Delivery
             </label>
             <select
-              className="classic"
+            className="  text-[10px]"
               value={delivery}
               onChange={(e) => {
                 setDelivery(e.target.value);
@@ -68,11 +68,11 @@ function AddProduct(props) {
           </div>
 
           <div className="flex gap-4 py-1  ">
-            <label htmlFor="payment" className="font-bold">
+            <label htmlFor="payment" className="font-bold text-[12px]">
               Payment
             </label>
             <select
-              className="classic"
+            className="  text-[10px]"
               value={delivery}
               onChange={(e) => {
                 setPayment(e.target.value);

@@ -1,15 +1,17 @@
 import React from "react";
 
-function DeliveryDetails() {
+function DeliveryDetails(props) {
   return (
-    <div>
-      <div className="flex justify-center  pt-10">
-        <h1 className="text-[22px] font-medium  ">Delivery Details </h1>
+    <div className="">
+      <div className="flex  ">
+        <h1 className="text-[14px] font-medium ml-[550px] ">
+          Delivery Details{" "}
+        </h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="27"
-          className="ml-3"
+          className="ml-3 "
           viewBox="0 0 30 27"
           fill="none"
         >
@@ -19,22 +21,103 @@ function DeliveryDetails() {
           />
         </svg>
       </div>
-      <div className="w-[352px] h-[250px]   m-auto   text-[16px]  ">
-        <p className="p-5 font-normal ">
-          All Transactions are completed after Delivery is coffirmed and it will
-          be done within a day after the order is confirmed. A certain percetage
-          of payment (refundable) is taken to confirm the order according to our
-          T&Cs.
+      <div className=" ml-[550px] text-[11px] mb-8  ">
+        <p className="  pt-2 ">
+          All Transactions are completed after Delivery is <br /> coffirmed and
+          it will be done within a day after <br /> the order is confirmed. A
+          certain percetage of <br /> payment (refundable) is taken to confirm
+          the <br /> order according to our T&Cs.
           <br />
           Please read our
-          <span className="text-orange-500 text-[15px] font-normal">
+          <span className="text-orange-500 text-[11px] font-normal">
             Terms and Conditions
           </span>
         </p>
       </div>
 
-      <div className=" w-[898px] h-[39px] text-black text-[15px] font-normal">
-        Remember to submit ur review by giving the starts.  on your order. It goes a long in providing the best Customer service  
+      <div className=" flex items-center justify-center ml-[200px] text-center text-black text-[11px] font-normal mb-8 ">
+        Remember to submit ur review by giving the stars. on your order. It goes
+        a long in providing the best Customer service
+        <svg
+          viewBox="0 0 64 64"
+          fill="currentColor"
+          height="1em"
+          width="1em"
+          color="kk"
+          {...props}
+        >
+          <path
+            fill="orange"
+            stroke="currentColor"
+            strokeMiterlimit={10}
+            strokeWidth={2}
+            d="M32 47L12 62l8-24L2 24h22l8-23 8 23h22L44 38l8 24z"
+          />
+        </svg>
+        <svg
+          viewBox="0 0 64 64"
+          fill="currentColor"
+          height="1em"
+          width="1em"
+          color="kk"
+          {...props}
+        >
+          <path
+            fill="orange"
+            stroke="currentColor"
+            strokeMiterlimit={10}
+            strokeWidth={2}
+            d="M32 47L12 62l8-24L2 24h22l8-23 8 23h22L44 38l8 24z"
+          />
+        </svg>
+        <svg
+          viewBox="0 0 64 64"
+          fill="currentColor"
+          height="1em"
+          width="1em"
+          color="kk"
+          {...props}
+        >
+          <path
+            fill="orange"
+            stroke="currentColor"
+            strokeMiterlimit={10}
+            strokeWidth={2}
+            d="M32 47L12 62l8-24L2 24h22l8-23 8 23h22L44 38l8 24z"
+          />
+        </svg>
+        <svg
+          viewBox="0 0 64 64"
+          fill="currentColor"
+          height="1em"
+          width="1em"
+          color="kk"
+          {...props}
+        >
+          <path
+            fill="orange"
+            stroke="currentColor"
+            strokeMiterlimit={10}
+            strokeWidth={2}
+            d="M32 47L12 62l8-24L2 24h22l8-23 8 23h22L44 38l8 24z"
+          />
+        </svg>
+        <svg
+          viewBox="0 0 64 64"
+          fill="currentColor"
+          height="1em"
+          width="1em"
+          color="kk"
+          {...props}
+        >
+          <path
+            fill="orange"
+            stroke="currentColor"
+            strokeMiterlimit={10}
+            strokeWidth={2}
+            d="M32 47L12 62l8-24L2 24h22l8-23 8 23h22L44 38l8 24z"
+          />
+        </svg>
       </div>
     </div>
   );
