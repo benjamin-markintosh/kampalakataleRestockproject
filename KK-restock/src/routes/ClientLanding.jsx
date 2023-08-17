@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import NavClientside from "../components/NavClientside";
 import ProductCategoriescard from "../components/cards/ProductCategoriescard";
 import Suppliers from "../components/cards/Suppliers";
+
 function ClientLanding() {
   return (
     <div>

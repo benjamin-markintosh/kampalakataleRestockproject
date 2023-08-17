@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -13,6 +13,23 @@ import LogoWhite from "./LogoWhite";
 import LogoBlack from "./LogoBlack";
 
 function NavClientside() {
+  const [greeting, setGreeting] = useState("");
+
+  useEffect(() => {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    if (currentHour >= 5 && currentHour < 12) {
+      setGreeting("Good morning");
+    } else if (currentHour >= 12 && currentHour < 18) {
+      setGreeting("Good afternoon");
+    } else if (currentHour >= 18 && currentHour < 22) {
+      setGreeting("Good evening");
+    } else {
+      setGreeting("Good night");
+    }
+  }, []);
+
   const [nav, setNav] = useState(false);
   const [delivery, setDelivery] = useState(true);
   return (
@@ -55,7 +72,7 @@ function NavClientside() {
           </div>
         </div>
         <div className="hidden md:scale-1/2 duration-300 md:flex text-xl font-bold p-2">
-          <h2>Good Morning Benjamin !</h2>
+          <h2>{greeting} Benjamin !</h2>
         </div>
         {/* Search Input */}
         <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px]">
@@ -135,8 +152,8 @@ function NavClientside() {
 
 export default NavClientside;
 
-{
-  /* 
+//{
+/* 
 this is for picking the results of the toggle buttons 
 <div>
 {delivery ? (
@@ -145,4 +162,4 @@ this is for picking the results of the toggle buttons
   <p>Active option: Pickup</p>
 )}
 </div> */
-}
+//}
