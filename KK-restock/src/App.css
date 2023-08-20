@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: ;
   text-align: center;
 }
 
@@ -18,54 +18,53 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-
 .read-the-docs {
   color: #888;
 }
 
-
 /* CARD CSS */
 
 .column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
 
-  .container {
-    padding: 0 16px;
-  }
+.container {
+  padding: 0 16px;
+}
 
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
 
 /* MAIN CSS */
 
-.main-text{
+.main-text {
   max-width: 650px;
   position: absolute;
   top: 45%;
@@ -73,92 +72,72 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: black;
-
 }
 
-.main-text .para{
+.main-text .para {
   letter-spacing: 1px;
   font-size: 30px;
   margin-bottom: 10px;
 }
-.main-text .para2{
+.main-text .para2 {
   font-size: 3.2rem;
   margin-bottom: 25px;
 }
-.main-text h1 span{
+.main-text h1 span {
   color: teal;
 }
 
-.main-text .btn{
+.main-text .btn {
   text-decoration: none;
-  background-color: #FF7A00;
+  background-color: #ff7a00;
   padding: 8px 25px;
   color: #fff;
   margin-top: 40px;
   border-radius: 35px;
-  
 }
 
-.main-text .btn:hover{
-  transition: all .6s ease;
+.main-text .btn:hover {
+  transition: all 0.6s ease;
   background: transparent;
-  border: 1px solid #FF7A00;
+  border: 1px solid #ff7a00;
 }
 /* FOOTER */
 
-.container{
+.container {
   position: relative;
   min-height: 100vh;
 }
-  .footer{
-    position: absolute;
-    bottom: 0;
-    height: 2.5rem;
-  }
-
-  /* TABLE CSS */
-  .table1{
-    width: 90%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-between;
-  }
-  table{
-    width: 800px;
-    height: 200px;
-    margin-top: 30px;
-    margin-left: 15px;
-    background: #F7D655;
-    border-radius: 5px;
-  }
-  tr{
-    text-align: center;
-  }
-  th{
-    font-size: 15px;
-   padding: 7px;
-    border-bottom: 1px solid black;
-  }
-
-  td{
-    font-size: 11px;
-    text-align: center;
-  }
-  
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* TABLE CSS */
+.table1 {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+table {
+  width: 800px;
+  height: 200px;
+  margin-top: 30px;
+  margin-left: 15px;
+  background: #f7d655;
+  border-radius: 5px;
+}
+tr {
+  text-align: center;
+}
+th {
+  font-size: 15px;
+  padding: 7px;
+  border-bottom: 1px solid black;
 }
 
-
+td {
+  font-size: 11px;
+  text-align: center;
+}

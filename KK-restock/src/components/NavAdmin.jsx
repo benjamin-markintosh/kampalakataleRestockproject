@@ -2,29 +2,61 @@
 
 import { useState } from "react";
 import "./NavAdmin.css";
+import { NavLink } from "react-router-dom";
+
+import LogoWhite from "../assets/images/KampalakataleLogo-06.png";
+import arrow from "../assets/images/arrow.svg";
+import dashboard from "../assets/images/dashboard.svg";
+import orders from "../assets/images/orders.svg";
+import transactions from "../assets/images/transactions.svg";
+import inventory from "../assets/images/inventory.svg";
+import branches from "../assets/images/branches.svg";
+import addProduct from "../assets/images/addProduct.svg";
+import editProduct from "../assets/images/editProduct.svg";
+import deleteProduct from "../assets/images/deleteProduct.svg";
+import faqs from "../assets/images/faqs.svg";
+import profile from "../assets/images/profile.svg";
+import signout from "../assets/images/signout.svg";
 
 function NavAdmin() {
   const [open, setOpen] = useState(true);
 
   const Menus = [
-    { title: "Dashboard", src: "dashboard" },
-    { title: "Orders", src: "orders" },
-    { title: "Transactions", src: "transactions" },
-    { title: "Inventory", src: "inventory" },
-    { title: "Branches", src: "branches" },
-    { title: "Add Products", src: "addProduct" },
-    { title: "Edit Products", src: "editProduct" },
-    { title: "Delete Products", src: "deleteProduct" },
-    { title: "FAQs", src: "faqs" },
-    { title: "Profile", src: "profile", gap: "true" },
-    { title: "Signout", src: "signout" },
+    { title: "Dashboard", src: dashboard, route: "/admin/dashboard" },
+    { title: "Orders", src: orders, route: "/admin/orders" },
+    {
+      title: "Transactions",
+      src: transactions,
+      route: "/admin/transactions",
+    },
+    { title: "Inventory", src: inventory, route: "/admin/inventory" },
+    { title: "Branches", src: branches, route: "/admin/branches" },
+    { title: "Add Products", src: addProduct, route: "/admin/add-product" },
+    {
+      title: "Edit Products",
+      src: editProduct,
+      route: "/admin/edit-product",
+    },
+    {
+      title: "Delete Products",
+      src: deleteProduct,
+      route: "/admin/delete-product",
+    },
+    { title: "FAQs", src: faqs, route: "/admin/faqs" },
+    {
+      title: "Profile",
+      src: profile,
+      gap: "true",
+      route: "/admin/profile",
+    },
+    { title: "Signout", src: signout, route: "/admin/signout" },
   ];
 
   return (
     <div
-      className={`navbarAdmin ${
+      className={`navbarAdmin fixed left-0 top-0  z-10 ${
         open ? "w-72" : "w-20"
-      }  duration-300  left-0 bg-kkblack pt-6  relative px-4 `}
+      }  duration-300  left-0 bg-kkblack pt-6 h-screen relative px-4 `}
     >
       <div
         className={`svg absolute cursor-pointer rounded-full -right-3 top-9 w-7 bg-white ${
@@ -32,14 +64,15 @@ function NavAdmin() {
         }`}
         onClick={() => setOpen(!open)}
       >
-        <img src="./src/assets/images/arrow.svg" />
+        <img src={arrow} />
       </div>
       <div className="flex gap-x-4 items-center">
         <img
-          src="./src/assets/images/KampalakataleLogo-06.png"
+          src={LogoWhite}
           className={`cursor-pointer duration-500 w-14`}
           alt="Kampala Katale"
         />
+
         <div
           className={`text-kkyellow  origin-left font-medium text-x1 duration-300 ${
             !open && "scale-0"
@@ -48,23 +81,21 @@ function NavAdmin() {
           <span className="text-kkwhite ">Kampala </span>Katale
         </div>
       </div>
+
       <ul className="pt-6">
         {Menus.map((menu, index) => (
-          <li
-            key={index}
-            className={`text-kkwhite text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-kkwhite/20  rounded-md ${
-              menu.gap ? "mt-9" : "mt-1"
-            }`}
-          >
-            <img
-              src={`./src/assets/images/${menu.src}.svg`}
-              className="h-8  "
-              alt={menu.title}
-            />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
-              {menu.title}
-            </span>
-          </li>
+          <NavLink key={index} to={menu.route}>
+            <li
+              className={`text-kkwhite text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-kkwhite/20 rounded-md ${
+                menu.gap ? "mt-9" : "mt-1"
+              }`}
+            >
+              <img src={menu.src} className="h-8" alt={menu.title} />
+              <span className={`${!open && "hidden"} origin-left duration-200`}>
+                {menu.title}
+              </span>
+            </li>
+          </NavLink>
         ))}
       </ul>
       <p

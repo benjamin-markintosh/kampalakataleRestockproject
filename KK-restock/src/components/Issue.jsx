@@ -3,12 +3,12 @@ import { AiOutlineClose } from "react-icons/ai";
 import LogoWhite from "./LogoWhite";
 
 function Issue() {
-  const [issue, setIssue] = useState(true);
+  const [issue, setIssue] = useState(false);
   return (
     <div>
       <div
         onClick={() => setIssue(!issue)}
-        className="fixed bottom-10 right-10 w-20 h-20 bg-kkyellow flex justfiy-center items-center hover:bg-kkorange hover:w-24 hover:h-24 duration-300 cursor-pointer text-white py-2 px-4 rounded-full shadow"
+        className="fixed bottom-10 right-10 w-20 h-20 bg-kkyellow flex justfiy-center items-center hover:bg-kkorange hover:w-24 hover:h-24 duration-300 cursor-pointer text-white py-2 px-4 rounded-full shadow-xl"
       >
         <div className="w-24 text-center text-kkblack text-md font-extrabold">
           Issue
@@ -42,6 +42,11 @@ function Issue() {
         <nav className="bg-kkblack h-full">
           <div className="logo pt-8 ">
             <LogoWhite />{" "}
+          </div>
+          <div>
+            <h2 className="text-kkwhite font-bold text-center pt-4 text-xl underline ">
+              Report any Issue!
+            </h2>
           </div>
           <ul className="flex flex-col p-4 text-kkblack">
             <li className="text-md py-4 flex cursor-pointer text-kkwhite hover:text-kkblack  rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">

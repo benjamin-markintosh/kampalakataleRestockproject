@@ -1,12 +1,12 @@
 import { useRouteError, useNavigate } from "react-router-dom";
 import { Button } from "@mantine/core";
 
-function ErrorPage() {
+function ErrorPageAdmin() {
   const error = useRouteError();
   const navigate = useNavigate();
 
   function goBack() {
-    navigate("..");
+    navigate("/admin");
   }
 
   return (
@@ -27,4 +27,4 @@ function ErrorPage() {
     </div>
   );
 }
-export default ErrorPage;
+export default ErrorPageAdmin;

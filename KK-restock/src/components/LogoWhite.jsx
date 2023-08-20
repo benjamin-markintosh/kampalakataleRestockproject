@@ -1,9 +1,11 @@
+import WhiteLogo from "../assets/images/KampalakataleLogo-06.png";
+
 function LogoWhite() {
   return (
     <div>
       <div className="flex gap-x-4 items-center">
         <img
-          src="./src/assets/images/KampalakataleLogo-06.png"
+          src={WhiteLogo}
           className={`cursor-pointer duration-500 w-14`}
           alt="Kampala Katale"
         />

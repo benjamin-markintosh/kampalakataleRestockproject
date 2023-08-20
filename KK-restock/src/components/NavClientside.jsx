@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -34,12 +35,14 @@ function NavClientside() {
   const [delivery, setDelivery] = useState(true);
   return (
     <div>
-      <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+      <div className="max-w-[1640px] mx-auto flex justify-between items-center shadow-lg p-4">
         {/* Left side */}
-        <div className="flex items-center">
-          <div className="logo w-auto sm:pr-16 pl-8">{<LogoBlack />}</div>
+        <div className="flex items-center inline-flex">
+          <div className="logo w-auto sm:pr-16 pl-8">
+            <Link to="/">{<LogoBlack />}</Link>
+          </div>
 
-          <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px] duration-">
+          <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px] duration-300">
             <p
               onClick={(e) => {
                 console.log(e.target.value);
@@ -80,14 +83,17 @@ function NavClientside() {
           <input
             className="bg-transparent border-none p-2 w-full focus:outline-none"
             type="text"
-            placeholder="Search foods"
+            placeholder="Search Products"
           />
         </div>
         {/* Cart button */}
         <div className="flex items-center ml-4 gap-4">
-          <button className="bg-black text-white hidden md:flex items-center py-2 px-4 rounded-full cursor-pointer hover:text-kkblack hover:bg-kkyellow">
+          <Link
+            to="/cart"
+            className="bg-black text-white w-28 h-10 md:flex items-center py-2 px-4 rounded-full flex justify-center items-center cursor-pointer hover:text-kkblack hover:bg-kkyellow"
+          >
             <BsFillCartFill size={20} className="mx-2 " /> Cart
-          </button>
+          </Link>
           <div onClick={() => setNav(!nav)} className="cursor-pointer">
             <AiOutlineMenu size={30} />
           </div>
@@ -118,30 +124,46 @@ function NavClientside() {
           />
           <nav className="bg-kkblack h-full">
             <div className="logo pt-8 ">
-              <LogoWhite />
+              <Link to="/">
+                <LogoWhite />
+              </Link>
             </div>
             <ul className="flex flex-col p-4 text-kkwhite">
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <TbTruckDelivery size={25} className="mr-4 " /> Orders
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <MdFavorite size={25} className="mr-4" /> Favorites
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <FaWallet size={25} className="mr-4" /> Wallet
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <MdHelp size={25} className="mr-4" /> Help
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <AiFillTag size={25} className="mr-4" /> Promotions
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <BsFillSaveFill size={25} className="mr-4" /> Best Ones
-              </li>
-              <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
-                <FaUserFriends size={25} className="mr-4" /> Invite Friends
-              </li>
+              <NavLink to="/orders">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <TbTruckDelivery size={25} className="mr-4 " /> Orders
+                </li>
+              </NavLink>
+              <NavLink to="/favorites">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <MdFavorite size={25} className="mr-4" /> Favorites
+                </li>
+              </NavLink>
+              <NavLink to="/wallet">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <FaWallet size={25} className="mr-4" /> Wallet
+                </li>
+              </NavLink>
+              <NavLink to="/help">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <MdHelp size={25} className="mr-4" /> Help
+                </li>
+              </NavLink>
+              <NavLink to="promotions">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <AiFillTag size={25} className="mr-4" /> Promotions
+                </li>
+              </NavLink>
+              <NavLink to="best-deals">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <BsFillSaveFill size={25} className="mr-4" /> Best Deals
+                </li>
+              </NavLink>
+              <NavLink to="referrals">
+                <li className="text-xl py-4 flex cursor-pointer rounded-lg pl-2 duration-300 hover:bg-kkyellow hover:text-kkblack">
+                  <FaUserFriends size={25} className="mr-4" /> Invite Friends
+                </li>
+              </NavLink>
             </ul>
           </nav>
         </div>

@@ -7,31 +7,31 @@ function ProductCategoriescard() {
         "https://i.pinimg.com/564x/a2/fc/77/a2fc772329272b29cf1b328196b28851.jpg",
     },
     {
-      name: "Manufacturers",
+      name: "Books and Stationery",
       desc: "All Factories and Companies in one place",
       image:
         "https://i.pinimg.com/564x/1b/3c/8c/1b3c8c984399af318a80b0336aea9592.jpg",
     },
     {
-      name: "Gloceries",
+      name: "Electronics",
       desc: "For all your Glocery Restocks ",
       image:
         "https://i.pinimg.com/564x/a8/ca/0f/a8ca0fd6894db828c12767afb4f3e2f1.jpg",
     },
     {
-      name: "Hardwares",
+      name: "Food and Beverage Products",
       desc: "All Hardware equipment in one place",
       image:
         "https://i.pinimg.com/564x/a2/fc/77/a2fc772329272b29cf1b328196b28851.jpg",
     },
     {
-      name: "Manufacturers",
+      name: "Electrical and Lightings",
       desc: "All Factories and Companies in one place",
       image:
         "https://i.pinimg.com/564x/1b/3c/8c/1b3c8c984399af318a80b0336aea9592.jpg",
     },
     {
-      name: "Gloceries",
+      name: "Clothing and Apparel",
       desc: "For all your Glocery Restocks ",
       image:
         "https://i.pinimg.com/564x/a8/ca/0f/a8ca0fd6894db828c12767afb4f3e2f1.jpg",
@@ -39,7 +39,7 @@ function ProductCategoriescard() {
   ];
 
   return (
-    <div className="max-w-[1640px] mx-auto p-4 py-12  grid md:grid-cols-3 lg:grid-cols-6 duration-500 gap-6">
+    <div className="max-w-[1640px] mx-auto p-4 py-12  grid md:grid-cols-3 lg:grid-cols-6 duration-500 shadow-2xl gap-6">
       {categoryData.map((categoryData, index) => (
         <div key={index} className="rounded-xl relative">
           <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
