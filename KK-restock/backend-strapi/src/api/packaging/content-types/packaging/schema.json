@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packagings",
+  "info": {
+    "singularName": "packaging",
+    "pluralName": "packagings",
+    "displayName": "Packaging",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "packaging_id": {
+      "type": "integer"
+    },
+    "packaging_name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "packaging"
+    }
+  }
+}

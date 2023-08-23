@@ -11,6 +11,7 @@ function SupplierReview() {
 
   const [products, setProducts] = useState([]);
   const [supplierName, setSupplierName] = useState(""); // Declare the variable for Suppliers name
+  const [supplierAddress, setSupplierAddress] = useState(""); // Declare the variable for Suppliers name
   const [supplierRating, setSupplierRating] = useState(""); // Declare the variable for Suppliers rating
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -22,6 +23,7 @@ function SupplierReview() {
       .then((response) => {
         console.log(response.data.data.attributes.supplier_name);
         setSupplierName(response.data.data.attributes.supplier_name);
+        setSupplierAddress(response.data.data.attributes.supplier_address);
         setSupplierRating(response.data.data.attributes.supplier_rating);
       })
       .catch((error) => {
@@ -75,7 +77,7 @@ function SupplierReview() {
 
       {/* Description */}
       <div className="desc flex justify-evenly items-center text-kkblack my-4">
-        This is the description section of the business.
+        {supplierAddress}
       </div>
       {/* Products */}
 
@@ -86,7 +88,7 @@ function SupplierReview() {
           </div>
         </div>
       ) : products.length === 0 ? (
-        <div className="flex justify-center items-center">
+        <div className="flex w-full h-96 justify-center items-center font-bold text-4xl text-kkblack/25 ">
           <p>There are no products yet.</p>
         </div>
       ) : (

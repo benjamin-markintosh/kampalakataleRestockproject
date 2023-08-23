@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_id": {
+      "type": "integer"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_desc": {
+      "type": "text"
+    },
+    "product_unit_weight": {
+      "type": "integer"
+    },
+    "product_unit_dimension": {
+      "type": "string"
+    },
+    "product_unit_price": {
+      "type": "decimal"
+    },
+    "product_wholesale_price": {
+      "type": "decimal"
+    },
+    "product_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "packaging": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::packaging.packaging",
+      "inversedBy": "products"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand",
+      "mappedBy": "product"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::review.review",
+      "mappedBy": "products"
+    },
+    "suppliers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::supplier.supplier",
+      "inversedBy": "products"
+    },
+    "header_image": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "image1": {
+      "type": "string"
+    },
+    "image2": {
+      "type": "string"
+    },
+    "image3": {
+      "type": "string"
+    }
+  }
+}

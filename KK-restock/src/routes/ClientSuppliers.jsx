@@ -62,17 +62,13 @@ function SuppliersByCategory() {
         ) : suppliers.length === 0 ? (
           <div className="flex w-full h-96 justify-center items-center font-bold text-4xl text-kkblack/25 ">
             <div>
-              <p>There are no products yet.</p>
+              <p>There are no Suppliers yet.</p>
             </div>
           </div>
         ) : (
-          <div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
             {suppliers.map((item, index) => (
-              <Link
-                to={`/supplier-page/${item.id}`}
-                className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4"
-                key={index}
-              >
+              <Link to={`/supplier-page/${item.id}`} key={index}>
                 <div className="border shadow-lg rounded-lg hover:scale-105 duration-300">
                   <img
                     src={item.attributes.image}
