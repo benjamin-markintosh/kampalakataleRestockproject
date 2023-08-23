@@ -1,12 +1,8 @@
-import React from "react";
-
 function DeliveryDetails(props) {
   return (
-    <div className="">
-      <div className="flex  ">
-        <h1 className="text-[14px] font-medium ml-[550px] ">
-          Delivery Details{" "}
-        </h1>
+    <div className=" ">
+      <div className="flex justify-left mx-8 mt-4  ">
+        <h1 className="text-[14px] font-medium  ">Delivery Details </h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
@@ -21,21 +17,23 @@ function DeliveryDetails(props) {
           />
         </svg>
       </div>
-      <div className=" ml-[550px] text-[11px] mb-8  ">
-        <p className="  pt-2 ">
-          All Transactions are completed after Delivery is <br /> coffirmed and
-          it will be done within a day after <br /> the order is confirmed. A
-          certain percetage of <br /> payment (refundable) is taken to confirm
-          the <br /> order according to our T&Cs.
+      <div className=" flex  justify-left text-[11px] mx-8 mb-8  md:text-md ">
+        <p className="  pt-2 text-left ">
+          All Transactions are completed after Delivery is coffirmed and it will
+          be done within a day after the order is confirmed. A certain percetage
+          of payment (refundable) is taken to confirm the order according to our
+          T&Cs.
           <br />
-          Please read our
-          <span className="text-orange-500 text-[11px] font-normal">
-            Terms and Conditions
-          </span>
+          <div className="pt-2">
+            Please read our
+            <span className="text-kkorange text-[11px]  font-normal">
+              Terms and Conditions
+            </span>
+          </div>
         </p>
       </div>
 
-      <div className=" flex items-center justify-center ml-[200px] text-center text-black text-[11px] font-normal mb-8 ">
+      <div className=" flex items-center justify-center  mx-8 text-center text-black text-[11px] font-normal mb-8 ">
         Remember to submit ur review by giving the stars. on your order. It goes
         a long in providing the best Customer service
         <svg

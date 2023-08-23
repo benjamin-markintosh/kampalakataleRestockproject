@@ -19,14 +19,13 @@ const productImage = [
   {
     id: "3",
     alt: "image ",
-    src: image2,
+    src: image3,
   },
 ];
 
 const renderSlides = productImage.map((image) => (
   <div key={image.id}>
-    <img src={image.src} alt={image.alt}  />
-    
+    <img src={image.src} alt={image.alt} />
   </div>
 ));
 
@@ -37,25 +36,19 @@ function ProductCarousel() {
   }
 
   return (
-    <div className=" ml-10  ">
-      <div>
-        <h2 className="font-semibold">Add to cart</h2>
-        <h5 className="font-light text-sm">HOME/MASTERMUTWE HARDWARE/CEMENT</h5>
-      </div>
-
+    <div className=" mx-4   ">
       {/* w-[799.35px] h-[710px] */}
       <Carousel
-        className=" z-10  "
+        className=" z-10  w-96 h-auto md:w-full"
         showArrows={true}
         autoPlay={true}
         infiniteLoop={true}
         selectedItem={productImage[currentIndex]}
         onChange={handleChange}
       >
-      {renderSlides}
+        {renderSlides}
       </Carousel>
     </div>
   );
 }
 export default ProductCarousel;
-

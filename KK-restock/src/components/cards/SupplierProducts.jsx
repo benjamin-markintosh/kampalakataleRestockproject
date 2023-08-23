@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { data } from "./data";
+import { Link } from "react-router-dom";
 
-const Suppliers = () => {
+const SupplierProducts = () => {
   //   console.log(data);
   const [suppliers, setSuppliers] = useState(data);
 
@@ -26,9 +26,7 @@ const Suppliers = () => {
 
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12">
-      <h1 className="text-kkorange font-bold text-4xl text-center">
-        Top Rated Suppliers
-      </h1>
+      <h1 className="text-kkorange font-bold text-xl ">Supplier Products</h1>
       {/* Filter Row */}
       <div className="flex flex-col lg:flex-row justify-between">
         {/* Fliter Type */}
@@ -64,31 +62,31 @@ const Suppliers = () => {
 
         {/* Filter Price */}
         <div>
-          <p className="font-bold text-gray-700">Filter Location</p>
+          <p className="font-bold text-gray-700">Filter Price</p>
           <div className="flex justify-between max-w-[390px] w-full">
             <button
               onClick={() => filterLocation("Kampala")}
               className="m-1 border-kkorange text-kkorange hover:bg-kkorange hover:text-white"
             >
-              Kampala
+              200 K
             </button>
             <button
               onClick={() => filterLocation("Mbarara")}
               className="m-1 border-kkorange text-kkorange hover:bg-kkorange hover:text-white"
             >
-              Mbarara
+              300 k
             </button>
             <button
               onClick={() => filterLocation("Gulu")}
               className="m-1 border-kkorange text-kkorange hover:bg-kkorange hover:text-white"
             >
-              Gulu
+              400 k
             </button>
             <button
               onClick={() => filterLocation("Masaka")}
               className="m-1 border-kkorange text-kkorange hover:bg-kkorange hover:text-white"
             >
-              Masaka
+              500 k
             </button>
           </div>
         </div>
@@ -97,26 +95,39 @@ const Suppliers = () => {
 
       <div>
         <Link
-          to="/supplier-page"
+          to="/product-description"
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4"
         >
           {suppliers.map((item, index) => (
             <div
               key={index}
-              className="border shadow-lg rounded-lg hover:scale-105 duration-300"
+              className="border shadow-lg grid  rounded-lg hover:scale-105 duration-300"
             >
               <img
                 src={item.image}
                 alt={item.name}
                 className="w-full h-[200px] object-cover rounded-t-lg"
               />
-              <div className="flex justify-between px-2 py-4">
-                <p className="font-bold">{item.name}</p>
-                <p>
-                  <span className="bg-orange-500 text-white p-1 rounded-full">
-                    {item.price}
-                  </span>
-                </p>
+              <div className="content px-2 py-4">
+                <div className="nameandstatus flex  ">
+                  <div className="name flex-1 font-bold">{item.name}</div>
+                  <div className="status text-green-500">Instock</div>
+                </div>
+                <div className="nameandstatus flex  ">
+                  <div className="grid">
+                    <div className="unit grid font-bold">
+                      <span>Unit Pack:</span> 25kg
+                    </div>
+                    <div className=" desc ">
+                      <p>Decrription will be g here</p>
+                    </div>
+                  </div>
+
+                  <div className="price grid  text-3xl text-right">
+                    250k Ugx
+                    <span className="text-base text-right">300k ugx</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -126,4 +137,4 @@ const Suppliers = () => {
   );
 };
 
-export default Suppliers;
+export default SupplierProducts;

@@ -19,6 +19,9 @@ import ClientHelp from "./routes/ClientHelp";
 import ClientPromotions from "./routes/ClientPromotions";
 import ClientBestDeals from "./routes/ClientBestDeals";
 import ClientReferrals from "./routes/ClientReferrals";
+import ProductDetails from "./routes/ProductDetails";
+import SupplierReview from "./routes/SupplierReview";
+import SuppliersByCategory from "./routes/ClientSuppliers";
 
 // ADMIN IMPORTS
 import AdminLayout from "./routes/AdminLayout";
@@ -75,6 +78,22 @@ const appRouter = createBrowserRouter([
       {
         path: "/referrals",
         element: <ClientReferrals />,
+      },
+      {
+        path: "/confirm-checkout",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/supplier-page/:supplierId",
+        element: <SupplierReview />,
+      },
+      {
+        path: "/product-description/:productId",
+        element: <ProductDetails />,
+      },
+      {
+        path: "/suppliers/:categoryId",
+        element: <SuppliersByCategory />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 function ClientOrders() {
+  fetch("http://");
   return <div>ClientOrders</div>;
 }
 

@@ -35,7 +35,7 @@ function NavClientside() {
   const [delivery, setDelivery] = useState(true);
   return (
     <div>
-      <div className="max-w-[1640px] mx-auto flex justify-between items-center shadow-lg p-4">
+      <div className="max-w-[1640px] mx-auto flex justify-between items-center shadow-lg px-4 pt-2 ">
         {/* Left side */}
         <div className="flex items-center inline-flex">
           <div className="logo w-auto sm:pr-16 pl-8">
@@ -78,7 +78,7 @@ function NavClientside() {
           <h2>{greeting} Benjamin !</h2>
         </div>
         {/* Search Input */}
-        <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px]">
+        <div className="bg-gray-200 hidden rounded-full md:flex items-center px-2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px]">
           <AiOutlineSearch size={25} />
           <input
             className="bg-transparent border-none p-2 w-full focus:outline-none"
@@ -90,7 +90,7 @@ function NavClientside() {
         <div className="flex items-center ml-4 gap-4">
           <Link
             to="/cart"
-            className="bg-black text-white w-28 h-10 md:flex items-center py-2 px-4 rounded-full flex justify-center items-center cursor-pointer hover:text-kkblack hover:bg-kkyellow"
+            className="bg-black text-white text-sm md:text-2xl w-2o h-8 md:w-28 md:h-10 md:flex items-center py-2 px-4 rounded-full flex justify-center items-center cursor-pointer hover:text-kkblack hover:bg-kkyellow"
           >
             <BsFillCartFill size={20} className="mx-2 " /> Cart
           </Link>

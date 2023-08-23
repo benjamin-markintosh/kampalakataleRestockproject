@@ -1,7 +1,7 @@
 import Category from "../components/cards/Category";
 import Hero from "../components/Hero";
 import ProductCategoriescard from "../components/cards/ProductCategoriescard";
-import Suppliers from "../components/cards/Suppliers";
+// import Suppliers from "../components/cards/Suppliers";
 import Issue from "../components/Issue";
 
 function ClientLanding() {
@@ -9,7 +9,7 @@ function ClientLanding() {
     <div>
       <Hero />
       <ProductCategoriescard />
-      <Suppliers />
+      {/* <Suppliers /> */}
       <Category />
       <Issue />
     </div>

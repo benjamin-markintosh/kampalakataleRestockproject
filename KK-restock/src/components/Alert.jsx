@@ -3,7 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import LogoWhite from "./LogoWhite";
 
 function Alert() {
-  const [issue, setIssue] = useState(true);
+  const [issue, setIssue] = useState(false);
   return (
     <div>
       <div

@@ -6,22 +6,22 @@ import DisplayRatingStars from "../components/DisplayRatingStars";
 function CartItem() {
   const [delivery, setDelivery] = useState(true);
   return (
-    <div className=" m-8 flex w-144 ">
+    <div className=" m-8 flex flex-col sm:flex-row w-144 ">
       <div className="w-64 h-64  mr-4 bg-kkwhite shadow-md"></div>
       <div>
-        <div className="  w-72 my-2 ">
-          <div className="flex justify-between items-center mb-4">
+        <div className="  w-72 my-4 sm:my-2 ">
+          <div className="flex justify-between items-center mb-2 md:mb-4">
             <p className="text-lg font-bold">Productname</p>
             <div>
-              <DisplayRatingStars Stars={3} starWidth={4} starHeight={4} />
+              <DisplayRatingStars Stars={4} starWidth={6} starHeight={6} />
             </div>
           </div>
 
-          <div className="flex justify-between mb-4">
+          <div className="flex justify-between mb-2 md:mb-4">
             <p className="text-lg font-base">Packaging type</p> -{" "}
             <div className="font-bold">Quantity</div>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-2 md:mb-4">
             <div className="font-bold">Delivery Mode: </div>
             <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px] duration-300">
               <p
@@ -55,11 +55,11 @@ function CartItem() {
               </p>
             </div>{" "}
           </div>
-          <div className="flex justify-between mb-4">
+          <div className="flex justify-between mb-2 md:mb-4">
             <p className="text-lg font-base">Supplier </p> -{" "}
             <div className="font-bold">Branch</div>
           </div>
-          <div className="flex justify-between items-center mb-4 ">
+          <div className="flex justify-between items-center mb-2 md:mb-4 ">
             <Link
               to="/confirm-checkout"
               className="bg-kkyellow flex justify-center items-center gap-2 font-bold text-md px-4 py-2 rounded-full cursor-pointer hover:bg-kkorange shadow-md hover:shadow-xl duration-300"
